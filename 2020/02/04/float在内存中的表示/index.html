@@ -46,19 +46,23 @@
   };
 </script>
 
-  <meta name="description" content="write blog: hexo new “title&quot;generate: hexo g&#x2F;generate生成页面并运行： hexo s&#x2F;startdeploy: hexo dclean: hexo c&#x2F;clean">
+  <meta name="description" content="Float在内存中的表示Float型，俗称浮点型，在C中占4 个bytes（字节）。 按照 IEEE754 标准,在计算机中的存储格式如下：   公式为N&#x3D; (-1)^Sign^ ×(1.Mantissa)  × 2^(Exponent-127)^ 分别由符号位、指数位（阶码）和小数位(Mantissa)组成，分别占1、8和23位bits。  忘说了，因为都是把1作为整数部分，所以就不在内存中表示">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to write a blog">
-<meta property="og:url" content="http://yoursite.com/2020/01/22/How-to-write-a-blog/index.html">
+<meta property="og:title" content="float在内存中的表示">
+<meta property="og:url" content="http://yoursite.com/2020/02/04/float%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="write blog: hexo new “title&quot;generate: hexo g&#x2F;generate生成页面并运行： hexo s&#x2F;startdeploy: hexo dclean: hexo c&#x2F;clean">
+<meta property="og:description" content="Float在内存中的表示Float型，俗称浮点型，在C中占4 个bytes（字节）。 按照 IEEE754 标准,在计算机中的存储格式如下：   公式为N&#x3D; (-1)^Sign^ ×(1.Mantissa)  × 2^(Exponent-127)^ 分别由符号位、指数位（阶码）和小数位(Mantissa)组成，分别占1、8和23位bits。  忘说了，因为都是把1作为整数部分，所以就不在内存中表示">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-01-22T22:41:43.000Z">
-<meta property="article:modified_time" content="2020-02-04T07:04:59.425Z">
+<meta property="og:image" content="http://yoursite.com/2020/02/04/float%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/_NAU%20course/1-2020%20Spring/EE-222%20INTERMEDIATE%20PROGRAMMING/mk_Notes/Untitled.assets/image-20200203232515753.png">
+<meta property="og:image" content="http://yoursite.com/2020/02/04/float%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/image-20200203234554930.png">
+<meta property="article:published_time" content="2020-02-04T07:05:56.000Z">
+<meta property="article:modified_time" content="2020-02-04T07:18:24.647Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="C, Float">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/02/04/float%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/_NAU%20course/1-2020%20Spring/EE-222%20INTERMEDIATE%20PROGRAMMING/mk_Notes/Untitled.assets/image-20200203232515753.png">
 
-<link rel="canonical" href="http://yoursite.com/2020/01/22/How-to-write-a-blog/">
+<link rel="canonical" href="http://yoursite.com/2020/02/04/float%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/">
 
 
 <script id="page-configurations">
@@ -70,7 +74,7 @@
   };
 </script>
 
-  <title>How to write a blog | Hexo</title>
+  <title>float在内存中的表示 | Hexo</title>
   
 
 
@@ -169,7 +173,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/22/How-to-write-a-blog/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/04/float%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -182,7 +186,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          How to write a blog
+          float在内存中的表示
         </h1>
 
         <div class="post-meta">
@@ -191,16 +195,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2020-01-22 15:41:43" itemprop="dateCreated datePublished" datetime="2020-01-22T15:41:43-07:00">2020-01-22</time>
+              <time title="Created: 2020-02-04 00:05:56 / Modified: 00:18:24" itemprop="dateCreated datePublished" datetime="2020-02-04T00:05:56-07:00">2020-02-04</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-04 00:04:59" itemprop="dateModified" datetime="2020-02-04T00:04:59-07:00">2020-02-04</time>
-              </span>
 
           
 
@@ -213,7 +211,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="write-blog-hexo-new-“title-quot"><a href="#write-blog-hexo-new-“title-quot" class="headerlink" title="write blog: hexo new “title&quot;"></a>write blog: hexo new “title&quot;</h2><h2 id="generate-hexo-g-generate"><a href="#generate-hexo-g-generate" class="headerlink" title="generate: hexo g/generate"></a>generate: hexo g/generate</h2><h2 id="生成页面并运行：-hexo-s-start"><a href="#生成页面并运行：-hexo-s-start" class="headerlink" title="生成页面并运行： hexo s/start"></a>生成页面并运行： hexo s/start</h2><h2 id="deploy-hexo-d"><a href="#deploy-hexo-d" class="headerlink" title="deploy: hexo d"></a>deploy: hexo d</h2><h2 id="clean-hexo-c-clean"><a href="#clean-hexo-c-clean" class="headerlink" title="clean: hexo c/clean"></a>clean: hexo c/clean</h2><h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+        <h1 id="Float在内存中的表示"><a href="#Float在内存中的表示" class="headerlink" title="Float在内存中的表示"></a>Float在内存中的表示</h1><p>Float型，俗称浮点型，在C中占4 个bytes（字节）。</p>
+<p>按照 <a href="https://en.wikipedia.org/wiki/IEEE_754" target="_blank" rel="noopener">IEEE754</a> 标准,在计算机中的存储格式如下：</p>
+<img src="/2020/02/04/float%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/_NAU course/1-2020 Spring/EE-222 INTERMEDIATE PROGRAMMING/mk_Notes/Untitled.assets/image-20200203232515753.png" alt="image-20200203232515753" style="zoom: 67%;">
+
+<p>公式为N= (-1)^Sign^ ×(1.Mantissa)  × 2^(Exponent-127)^</p>
+<p>分别由符号位、指数位（阶码）和小数位(Mantissa)组成，分别占1、8和23位bits。</p>
+<blockquote>
+<p>忘说了，因为都是把1作为整数部分，所以就不在内存中表示，但默认其整数位为<strong>1</strong></p>
+</blockquote>
+<h5 id="那大家也应该和我一样，困惑为什么阶码的范围是-1-254-呢？"><a href="#那大家也应该和我一样，困惑为什么阶码的范围是-1-254-呢？" class="headerlink" title="那大家也应该和我一样，困惑为什么阶码的范围是==1~254==呢？"></a>那大家也应该和我一样，困惑为什么阶码的范围是==1~254==呢？</h5><p>首先，八位数应该就有2^8^，256种可能性，但因为要从0开始，所以是0<del>255。<strong>但是</strong>，IEEE754把<code>0</code>和<code>255</code>归类到<u>次正规数(Denormalized/subnormal number)</u>和<u>无穷大</u>去啦，所以我们能用来正常表示的只有1</del>254种可能性了。</p>
+<p>次正规数：如果==指数都为0==，则不管小树部分为多少，都说他们是次正规数</p>
+<p>举个例子：</p>
+<p><img src="/2020/02/04/float%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/image-20200203234554930.png" alt="image-20200203234554930"></p>
+<p>小数位(.11)<del>b</del>=2^-1^+2^-2^=0.75;</p>
+<p>指数为e=0, e-127=-127;</p>
+<p>则该浮点数为 1.75×2^-127^ = 0.75×2^-126^</p>
+<h5 id="为什么表示时指数部分是2的-E-127-次方呢？"><a href="#为什么表示时指数部分是2的-E-127-次方呢？" class="headerlink" title="为什么表示时指数部分是2的==E-127==次方呢？"></a>为什么表示时指数部分是2的==E-127==次方呢？</h5><blockquote>
+<p>通常我们称此处的127为<strong>偏移量</strong>(bias)</p>
+</blockquote>
+<p>因为IEEE为了不在阶码中引入符号位，所以加入偏移量。不然1~254只能表示指数大于0 的部分，那对小于0的部分不就不公平了嘛。</p>
+<p>所以引入偏移量127，这样E-127= ==[-126,127]==，就可以表示指数为负的部分啦~~</p>
+<p>那为什么是127呢？很简单，因为254/2=127！是不是很简单就能像明白？奥利给！</p>
+
     </div>
 
     
@@ -221,6 +241,9 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/C-Float/" rel="tag"># C, Float</a>
+          </div>
 
         
 
@@ -228,12 +251,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/01/22/My-first-blog/" rel="prev" title="My first blog">
-      <i class="fa fa-chevron-left"></i> My first blog
+    <a href="/2020/01/22/How-to-write-a-blog/" rel="prev" title="How to write a blog">
+      <i class="fa fa-chevron-left"></i> How to write a blog
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/02/04/float%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/" rel="next" title="float在内存中的表示">
-      float在内存中的表示 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/02/04/Flutter-widgets/" rel="next" title="Flutter widgets">
+      Flutter widgets <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -294,7 +317,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#write-blog-hexo-new-“title-quot"><span class="nav-number">1.</span> <span class="nav-text">write blog: hexo new “title&quot;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#generate-hexo-g-generate"><span class="nav-number">2.</span> <span class="nav-text">generate: hexo g&#x2F;generate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成页面并运行：-hexo-s-start"><span class="nav-number">3.</span> <span class="nav-text">生成页面并运行： hexo s&#x2F;start</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#deploy-hexo-d"><span class="nav-number">4.</span> <span class="nav-text">deploy: hexo d</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clean-hexo-c-clean"><span class="nav-number">5.</span> <span class="nav-text">clean: hexo c&#x2F;clean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">6.</span> <span class="nav-text"></span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Float在内存中的表示"><span class="nav-number">1.</span> <span class="nav-text">Float在内存中的表示</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#那大家也应该和我一样，困惑为什么阶码的范围是-1-254-呢？"><span class="nav-number">1.0.0.0.1.</span> <span class="nav-text">那大家也应该和我一样，困惑为什么阶码的范围是&#x3D;&#x3D;1~254&#x3D;&#x3D;呢？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#为什么表示时指数部分是2的-E-127-次方呢？"><span class="nav-number">1.0.0.0.2.</span> <span class="nav-text">为什么表示时指数部分是2的&#x3D;&#x3D;E-127&#x3D;&#x3D;次方呢？</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
