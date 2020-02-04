@@ -46,21 +46,21 @@
   };
 </script>
 
-  <meta name="description" content="Float在内存中的表示Float型，俗称浮点型，在C中占4 个bytes（字节）。 按照 IEEE754 标准,在计算机中的存储格式如下：   公式为N&#x3D; (-1)^Sign^ ×(1.Mantissa)  × 2^(Exponent-127)^ 分别由符号位、指数位（阶码）和小数位(Mantissa)组成，分别占1、8和23位bits。  忘说了，因为都是把1作为整数部分，所以就不在内存中表示">
+  <meta name="description" content="Float在内存中的表示Float型，俗称浮点型，在C中占4 个bytes（字节）。 按照 IEEE754 标准,在计算机中的存储格式如下： 公式为N&#x3D; (-1)^Sign^ ×(1.Mantissa)  × 2^(Exponent-127)^ 分别由符号位、指数位（阶码）和小数位(Mantissa)组成，分别占1、8和23位bits。  忘说了，因为都是把1作为整数部分，所以就不在内存中表示，但">
 <meta property="og:type" content="article">
 <meta property="og:title" content="float在内存中的表示">
 <meta property="og:url" content="http://dongyang-yu.github.io/2020/02/04/float%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Float在内存中的表示Float型，俗称浮点型，在C中占4 个bytes（字节）。 按照 IEEE754 标准,在计算机中的存储格式如下：   公式为N&#x3D; (-1)^Sign^ ×(1.Mantissa)  × 2^(Exponent-127)^ 分别由符号位、指数位（阶码）和小数位(Mantissa)组成，分别占1、8和23位bits。  忘说了，因为都是把1作为整数部分，所以就不在内存中表示">
+<meta property="og:description" content="Float在内存中的表示Float型，俗称浮点型，在C中占4 个bytes（字节）。 按照 IEEE754 标准,在计算机中的存储格式如下： 公式为N&#x3D; (-1)^Sign^ ×(1.Mantissa)  × 2^(Exponent-127)^ 分别由符号位、指数位（阶码）和小数位(Mantissa)组成，分别占1、8和23位bits。  忘说了，因为都是把1作为整数部分，所以就不在内存中表示，但">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://dongyang-yu.github.io/2020/02/04/float%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/_NAU%20course/1-2020%20Spring/EE-222%20INTERMEDIATE%20PROGRAMMING/mk_Notes/Untitled.assets/image-20200203232515753.png">
+<meta property="og:image" content="http://dongyang-yu.github.io/2020/02/04/float%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/image-20200203232515753.png">
 <meta property="og:image" content="http://dongyang-yu.github.io/2020/02/04/float%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/image-20200203234554930.png">
 <meta property="article:published_time" content="2020-02-04T07:05:56.000Z">
-<meta property="article:modified_time" content="2020-02-04T07:18:24.647Z">
+<meta property="article:modified_time" content="2020-02-04T09:10:25.553Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="C, Float">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://dongyang-yu.github.io/2020/02/04/float%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/_NAU%20course/1-2020%20Spring/EE-222%20INTERMEDIATE%20PROGRAMMING/mk_Notes/Untitled.assets/image-20200203232515753.png">
+<meta name="twitter:image" content="http://dongyang-yu.github.io/2020/02/04/float%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/image-20200203232515753.png">
 
 <link rel="canonical" href="http://dongyang-yu.github.io/2020/02/04/float%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/">
 
@@ -197,7 +197,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-02-04 00:05:56 / Modified: 00:18:24" itemprop="dateCreated datePublished" datetime="2020-02-04T00:05:56-07:00">2020-02-04</time>
+              <time title="Created: 2020-02-04 00:05:56 / Modified: 02:10:25" itemprop="dateCreated datePublished" datetime="2020-02-04T00:05:56-07:00">2020-02-04</time>
             </span>
 
           
@@ -212,9 +212,7 @@
 
       
         <h1 id="Float在内存中的表示"><a href="#Float在内存中的表示" class="headerlink" title="Float在内存中的表示"></a>Float在内存中的表示</h1><p>Float型，俗称浮点型，在C中占4 个bytes（字节）。</p>
-<p>按照 <a href="https://en.wikipedia.org/wiki/IEEE_754" target="_blank" rel="noopener">IEEE754</a> 标准,在计算机中的存储格式如下：</p>
-<img src="/2020/02/04/float%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/_NAU course/1-2020 Spring/EE-222 INTERMEDIATE PROGRAMMING/mk_Notes/Untitled.assets/image-20200203232515753.png" alt="image-20200203232515753" style="zoom: 67%;">
-
+<p>按照 <a href="https://en.wikipedia.org/wiki/IEEE_754" target="_blank" rel="noopener">IEEE754</a> 标准,在计算机中的存储格式如下：<br><img src="/2020/02/04/float%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/image-20200203232515753.png" alt="image-20200203232515753"></p>
 <p>公式为N= (-1)^Sign^ ×(1.Mantissa)  × 2^(Exponent-127)^</p>
 <p>分别由符号位、指数位（阶码）和小数位(Mantissa)组成，分别占1、8和23位bits。</p>
 <blockquote>
